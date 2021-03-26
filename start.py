@@ -42,9 +42,6 @@ vals1 = combine_preds(preds=[preds11,preds12])
 vals2 = combine_preds(preds=[preds21,preds22])
 
 cls = np.concatenate([vals0[:,3],vals1[:,3],vals2[:,3]]).astype(int)
-print(cls[:1000].mean())
-print(cls[1000:2000].mean())
-print(cls[2000:3000].mean())
 
 filename = 'predictions_start.csv'
 toKaggle = pd.DataFrame(cls)
